@@ -23,11 +23,13 @@ gokmeans <input_file_or_directory>
 ```
 
 ```terminal
-# Use -n to set number of dominant colors
+# Use -n to set number of dominant colors to find (based on higher percentage)
 go run main.go -n 10 <input_file_or_directory>
 ```
 
 ### Sample Images
+
+Sample HTML output: https://bradsec.github.io/gokmeans/
 
 multicolor.png  
 
