@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go K-Means Image Color Separation</title>
+    <style>
+        * {
+               box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            line-height: 1.4em;
+            background: #fafafa;
+            color: #222222;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 50%;
+            text-align: center;
+        }
+        .color-box {
+            margin: 3px;
+            display: inline-block;
+            text-align: center;
+            width: 150px;
+            padding: 15px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>Go K-Means Image Color Separation</h1>
+    <h2>multicolor.png</h2>
+    <div class="row">
+        <div class="column"><img src="multicolor.png" alt="Original image" /></div>
+        <div class="column"><img src="multicolor_quantized.jpg" alt="Quantized image" /></div>
+    </div>
+    <div class="row">
+        <div class="column"><p>Original Image</p></div>
+        <div class="column"><p>Quantized Image</p></div>
+    </div>
+
+    <div class="color-box" style="background-color:#130bf8;" data-color="#130bf8">#130bf8<br/>12.25%</div>
+    <div class="color-box" style="background-color:#ed0d11;" data-color="#ed0d11">#ed0d11<br/>11.75%</div>
+    <div class="color-box" style="background-color:#a8030b;" data-color="#a8030b">#a8030b<br/>8.39%</div>
+    <div class="color-box" style="background-color:#03cfef;" data-color="#03cfef">#03cfef<br/>8.32%</div>
+    <div class="color-box" style="background-color:#080806;" data-color="#080806">#080806<br/>7.78%</div>
+    <div class="color-box" style="background-color:#0577fe;" data-color="#0577fe">#0577fe<br/>7.03%</div>
+    <div class="color-box" style="background-color:#87ea0b;" data-color="#87ea0b">#87ea0b<br/>6.31%</div>
+    <div class="color-box" style="background-color:#0a8602;" data-color="#0a8602">#0a8602<br/>5.47%</div>
+    <div class="color-box" style="background-color:#1dc90c;" data-color="#1dc90c">#1dc90c<br/>5.13%</div>
+    <div class="color-box" style="background-color:#04e9a3;" data-color="#04e9a3">#04e9a3<br/>5.05%</div>
+    <div class="color-box" style="background-color:#e7ab04;" data-color="#e7ab04">#e7ab04<br/>5.02%</div>
+    <div class="color-box" style="background-color:#06e449;" data-color="#06e449">#06e449<br/>4.83%</div>
+    <div class="color-box" style="background-color:#b708d4;" data-color="#b708d4">#b708d4<br/>4.58%</div>
+    <div class="color-box" style="background-color:#600704;" data-color="#600704">#600704<br/>4.08%</div>
+    <div class="color-box" style="background-color:#000089;" data-color="#000089">#000089<br/>2.35%</div>
+    <div class="color-box" style="background-color:#a5d7ae;" data-color="#a5d7ae">#a5d7ae<br/>1.64%</div>
+    
+    <h2>gopherblue.png</h2>
+    <div class="row">
+        <div class="column"><img src="gopherblue.png" alt="Original image" /></div>
+        <div class="column"><img src="gopherblue_quantized.jpg" alt="Quantized image" /></div>
+    </div>
+    <div class="row">
+        <div class="column"><p>Original Image</p></div>
+        <div class="column"><p>Quantized Image</p></div>
+    </div>
+
+    <div class="color-box" style="background-color:#cdcecf;" data-color="#cdcecf">#cdcecf<br/>16.22%</div>
+    <div class="color-box" style="background-color:#acadaf;" data-color="#acadaf">#acadaf<br/>15.44%</div>
+    <div class="color-box" style="background-color:#b1b2b4;" data-color="#b1b2b4">#b1b2b4<br/>15.39%</div>
+    <div class="color-box" style="background-color:#073b55;" data-color="#073b55">#073b55<br/>9.94%</div>
+    <div class="color-box" style="background-color:#096c90;" data-color="#096c90">#096c90<br/>8.97%</div>
+    <div class="color-box" style="background-color:#a8a9ab;" data-color="#a8a9ab">#a8a9ab<br/>7.85%</div>
+    <div class="color-box" style="background-color:#a4a5a8;" data-color="#a4a5a8">#a4a5a8<br/>5.90%</div>
+    <div class="color-box" style="background-color:#c2c3c4;" data-color="#c2c3c4">#c2c3c4<br/>5.30%</div>
+    <div class="color-box" style="background-color:#b9b9bb;" data-color="#b9b9bb">#b9b9bb<br/>3.89%</div>
+    <div class="color-box" style="background-color:#a0a2a4;" data-color="#a0a2a4">#a0a2a4<br/>3.50%</div>
+    <div class="color-box" style="background-color:#7d7e80;" data-color="#7d7e80">#7d7e80<br/>1.95%</div>
+    <div class="color-box" style="background-color:#919294;" data-color="#919294">#919294<br/>1.61%</div>
+    <div class="color-box" style="background-color:#443b38;" data-color="#443b38">#443b38<br/>1.46%</div>
+    <div class="color-box" style="background-color:#309cbb;" data-color="#309cbb">#309cbb<br/>1.35%</div>
+    <div class="color-box" style="background-color:#8f5b3a;" data-color="#8f5b3a">#8f5b3a<br/>0.80%</div>
+    <div class="color-box" style="background-color:#c98c59;" data-color="#c98c59">#c98c59<br/>0.43%</div>
+
+<script>
+    function getBrightness(hex) {
+        if (hex.indexOf('#') === 0) {
+            hex = hex.slice(1);
+        }
+        var r = parseInt(hex.slice(0, 2), 16),
+            g = parseInt(hex.slice(2, 4), 16),
+            b = parseInt(hex.slice(4, 6), 16);
+        
+        return (r * 299 + g * 587 + b * 114) / 1000;
+    }
+    
+    var cells = document.getElementsByClassName('color-box');
+    for (var i = 0; i < cells.length; i++) {
+        var cell = cells[i];
+        
+        var color = cell.getAttribute('data-color');
+        
+        cell.style.color = getBrightness(color) > 128 ? 'black' : 'white';
+    }
+</script>
+</div>   
+</body>
+</html>

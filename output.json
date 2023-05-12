@@ -1,0 +1,88 @@
+[
+  {
+    "ID": "multicolor.png",
+    "QID": "multicolor_quantized.jpg",
+    "Colors": [
+      {
+        "RGBAColor": "{19 11 248 255}",
+        "HexColor": "#130bf8",
+        "Percentage": 12.25
+      },
+      {
+        "RGBAColor": "{237 13 17 255}",
+        "HexColor": "#ed0d11",
+        "Percentage": 11.75
+      },
+      {
+        "RGBAColor": "{168 3 11 255}",
+        "HexColor": "#a8030b",
+        "Percentage": 8.39
+      },
+      {
+        "RGBAColor": "{3 207 239 255}",
+        "HexColor": "#03cfef",
+        "Percentage": 8.32
+      },
+      {
+        "RGBAColor": "{8 8 6 255}",
+        "HexColor": "#080806",
+        "Percentage": 7.78
+      },
+      {
+        "RGBAColor": "{5 119 254 255}",
+        "HexColor": "#0577fe",
+        "Percentage": 7.03
+      },
+      {
+        "RGBAColor": "{135 234 11 255}",
+        "HexColor": "#87ea0b",
+        "Percentage": 6.31
+      },
+      {
+        "RGBAColor": "{10 134 2 255}",
+        "HexColor": "#0a8602",
+        "Percentage": 5.47
+      },
+      {
+        "RGBAColor": "{29 201 12 255}",
+        "HexColor": "#1dc90c",
+        "Percentage": 5.13
+      },
+      {
+        "RGBAColor": "{4 233 163 255}",
+        "HexColor": "#04e9a3",
+        "Percentage": 5.05
+      },
+      {
+        "RGBAColor": "{231 171 4 255}",
+        "HexColor": "#e7ab04",
+        "Percentage": 5.02
+      },
+      {
+        "RGBAColor": "{6 228 73 255}",
+        "HexColor": "#06e449",
+        "Percentage": 4.83
+      },
+      {
+        "RGBAColor": "{183 8 212 255}",
+        "HexColor": "#b708d4",
+        "Percentage": 4.58
+      },
+      {
+        "RGBAColor": "{96 7 4 255}",
+        "HexColor": "#600704",
+        "Percentage": 4.08
+      },
+      {
+        "RGBAColor": "{0 0 137 255}",
+        "HexColor": "#000089",
+        "Percentage": 2.35
+      },
+      {
+        "RGBAColor": "{165 215 174 255}",
+        "HexColor": "#a5d7ae",
+        "Percentage": 1.64
+      }
+    ]
+  }
+]
